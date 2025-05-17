@@ -1,6 +1,7 @@
 {
   "name": "express-netlify-functions-modular",
   "version": "1.0.0",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "dev": "netlify dev"
