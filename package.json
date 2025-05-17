@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "netlify dev"
+    "dev": "netlify dev"
   },
   "dependencies": {
     "express": "^4.18.2",
+    "mongoose": "^8.15.0",
     "serverless-http": "^3.0.2"
   },
   "devDependencies": {
