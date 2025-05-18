@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { getHomeData } from '../controllers/homeController';
-import apiKeyMiddleware from '../middleware/apiKey.js';
+import { getHomeData } from '../controllers/homeController.js';
+import apiKeyMiddleware from '../middlewares/apiKey.js';
 
 const router = Router();
 
