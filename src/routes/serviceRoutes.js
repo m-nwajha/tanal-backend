@@ -8,14 +8,13 @@ import {
 } from '../controllers/serviceController.js';
 
 import withApiKeyProtection from '../middlewares/apiKey.js';
-import upload from '../middlewares/upload.js'; // استيراد multer middleware
+import upload from '../middlewares/upload.js';
 
 const router = express.Router();
 
 router.get('/services', withApiKeyProtection, getAllServices);
 router.get('/services/:id', withApiKeyProtection, getServiceById);
 
-// middleware upload.single('image') لاستقبال ملف صورة وحقل اسمه image
 router.post(
   '/services',
   withApiKeyProtection,

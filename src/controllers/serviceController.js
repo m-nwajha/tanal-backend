@@ -39,9 +39,8 @@ export const createService = async (req, res) => {
     const { title, description } = req.body;
     let image = null;
 
-    // اذا تم رفع صورة في req.file
     if (req.file) {
-      image = req.file.filename; // أو مسار كامل لو تريد
+      image = req.file.filename; 
     }
 
     const newService = new Service({ title, description, image });
@@ -63,7 +62,6 @@ export const updateService = async (req, res) => {
 
     const updateData = { ...req.body };
 
-    // إذا تم رفع صورة جديدة، حدث قيمة الصورة
     if (req.file) {
       updateData.image = req.file.filename;
     }
