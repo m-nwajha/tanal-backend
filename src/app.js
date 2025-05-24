@@ -7,6 +7,8 @@ import reviewRoute from "./routes/reviewRoute.js"
 import boardDirectorsRoute from './routes/boardDirectorsRoute.js';
 import contactRoute from './routes/contactRoute.js';
 import contactInfoRoute from './routes/contactInfoRoute.js';
+import betweenLinesRoute from './routes/betweenLinesRoute.js';
+
 const app = express();
 
 app.use(express.json());
@@ -18,6 +20,8 @@ app.use('/api', reviewRoute);
 app.use('/api', boardDirectorsRoute);
 app.use('/api', contactRoute);
 app.use('/api', contactInfoRoute);
+app.use('/api', betweenLinesRoute);
+
 
 
 
