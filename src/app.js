@@ -4,7 +4,7 @@ import serviceRoutes from './routes/serviceRoutes.js'
 import counterRoute from './routes/counterRoute.js';
 import projectRoute from './routes/projectRoutes.js';
 import reviewRoute from "./routes/reviewRoute.js"
-
+import boardDirectorsRoute from './routes/boardDirectorsRoute.js';
 
 const app = express();
 
@@ -14,6 +14,8 @@ app.use('/api', serviceRoutes);
 app.use('/api' , counterRoute);
 app.use('/api', projectRoute);
 app.use('/api', reviewRoute);
+app.use('/api', boardDirectorsRoute);
+
 
 
 
