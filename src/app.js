@@ -16,6 +16,7 @@ import visionRoute from './routes/visionRoute.js';
 import messageRoute from './routes/messageRoute.js';
 import goalsRoute from './routes/goalsRoute.js';
 import clientsRoute from './routes/clientsRoute.js';
+import requestRoute from './routes/requestRoute.js';
 
 
 
@@ -44,6 +45,7 @@ app.use('/api', visionRoute);
 app.use('/api', messageRoute);
 app.use('/api', goalsRoute);
 app.use('/api', clientsRoute);
+app.use('/api', requestRoute);
 
 
 
