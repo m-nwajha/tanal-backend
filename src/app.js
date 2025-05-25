@@ -11,7 +11,10 @@ import boardDirectorsRoute from './routes/boardDirectorsRoute.js';
 import contactRoute from './routes/contactRoute.js';
 import contactInfoRoute from './routes/contactInfoRoute.js';
 import betweenLinesRoute from './routes/betweenLinesRoute.js';
-import whyTanalController from './routes/whyTanalController.js';
+import whyTanalRoute from './routes/whyTanalRoute.js';
+import visionRoute from './routes/visionRoute.js';
+import messageRoute from './routes/messageRoute.js';
+
 
 
 const app = express();
@@ -34,6 +37,9 @@ app.use('/api', boardDirectorsRoute);
 app.use('/api', contactRoute);
 app.use('/api', contactInfoRoute);
 app.use('/api', betweenLinesRoute);
-app.use('/api', whyTanalController);
+app.use('/api', whyTanalRoute);
+app.use('/api', visionRoute);
+app.use('/api', messageRoute);
+
 
 export default app;
