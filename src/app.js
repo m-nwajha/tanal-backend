@@ -15,6 +15,7 @@ import whyTanalRoute from './routes/whyTanalRoute.js';
 import visionRoute from './routes/visionRoute.js';
 import messageRoute from './routes/messageRoute.js';
 import goalsRoute from './routes/goalsRoute.js';
+import clientsRoute from './routes/clientsRoute.js';
 
 
 
@@ -42,6 +43,8 @@ app.use('/api', whyTanalRoute);
 app.use('/api', visionRoute);
 app.use('/api', messageRoute);
 app.use('/api', goalsRoute);
+app.use('/api', clientsRoute);
+
 
 
 export default app;
