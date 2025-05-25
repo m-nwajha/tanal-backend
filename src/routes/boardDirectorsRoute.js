@@ -11,24 +11,24 @@ import upload from '../middlewares/upload.js';
 
 const router = express.Router();
 
-router.get('/boardDirectors', withApiKeyProtection, getAllBoardDirectors);
+router.get('/board-directors', withApiKeyProtection, getAllBoardDirectors);
 
-router.get('/boardDirectors/:id', withApiKeyProtection, getBoardDirectorsById);
+router.get('/board-directors/:id', withApiKeyProtection, getBoardDirectorsById);
 
 router.post(
-  '/boardDirectors',
+  '/board-directors',
   withApiKeyProtection,
   upload.single('image'),
   createBoardDirectors
 );
 
 router.put(
-  '/boardDirectors/:id',
+  '/board-directors/:id',
   withApiKeyProtection,
   upload.single('image'),
   updateBoardDirectors
 );
 
-router.delete('/boardDirectors/:id', withApiKeyProtection, deleteBoardDirectors);
+router.delete('/board-directors/:id', withApiKeyProtection, deleteBoardDirectors);
 
 export default router;
