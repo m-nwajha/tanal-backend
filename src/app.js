@@ -1,6 +1,7 @@
 import express from 'express';
 import fs from 'fs';
 import path from 'path';
+import cors from 'cors';
 
 import homeRoute from './routes/homeRoute.js';
 import serviceRoutes from './routes/serviceRoutes.js';
