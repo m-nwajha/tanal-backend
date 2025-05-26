@@ -13,9 +13,13 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-  const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+  const allowedMimeTypes = [
+    'image/jpeg',
+    'image/png',
+    'image/jpg',
+    'image/webp',
+  ];
 
-  // السماح أيضاً لو اسم الملف يحتوي على 'bdf' أو 'word' (بدون اعتبار نوع الميم)
   const filename = file.originalname.toLowerCase();
   if (
     allowedMimeTypes.includes(file.mimetype) ||
