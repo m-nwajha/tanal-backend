@@ -23,11 +23,24 @@ import authRoute from './routes/authRoute.js';
 
 
 const app = express();
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://tanalaloula.sa',
+  'https://www.tanalaloula.sa',
+];
+
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'x-api-key'],
+    credentials: true,
   })
 );
 
