@@ -5,7 +5,15 @@ import Project from '../models/project.js';
 export const getAllProjects = async (req, res) => {
   try {
     await connectMongodb();
-    const projects = await Project.find();
+
+    const { title } = req.query;
+    let filter = {};
+
+    if (title) {
+      filter.title = decodeURIComponent(title);
+    }
+
+    const projects = await Project.find(filter);
     res.json(projects);
   } catch (error) {
     console.error(error);
