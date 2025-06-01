@@ -10,7 +10,7 @@ export const getAllProjects = async (req, res) => {
     let filter = {};
 
     if (title) {
-      filter.title = decodeURIComponent(title);
+      filter.title = { $regex: title, $options: 'i' };
     }
 
     const projects = await Project.find(filter);
